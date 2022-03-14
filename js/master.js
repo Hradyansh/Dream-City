@@ -166,8 +166,12 @@ function handleNextClick(event) {
   searchMovie(query, nextPageCount)
     .then(() => {
       console.log(movieSearch);
-      // display(movieSearch)
-      nextPageCount += 1;
+      if(movieSearch.length){
+        // console.log("************", movieSearch.length);
+        nextPageCount += 1;
+      }else{
+        nextPageCount=nextPageCount;
+      }
     })
     .then(() => {
       movieSearch.forEach((item, i) => {
