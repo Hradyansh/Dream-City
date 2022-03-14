@@ -25,7 +25,7 @@ async function searchMovie(query, pageNumber) {
   movieSearch = [];
   movieData = [];
   console.log(pageNumber);
-  let url = `http://www.omdbapi.com/?s=${query}&page=${pageNumber}&apikey=2b172a0c`;
+  let url = `https://www.omdbapi.com/?s=${query}&page=${pageNumber}&apikey=2b172a0c`;
   const response = await fetch(url);
 
   const data = await response.json();
