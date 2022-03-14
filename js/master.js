@@ -190,6 +190,12 @@ function handlePrevClick(event) {
     .then(() => {
       console.log(movieSearch);
       // display(movieSearch)
+          if(movieSearch.length > 0){
+        // console.log("************", movieSearch.length);
+        nextPageCount = nextPageCount - 1;
+      }else{
+        prevPageCount=1;
+      }
     })
     .then(() => {
       movieSearch.forEach((item, i) => {
