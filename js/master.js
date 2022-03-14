@@ -159,7 +159,7 @@ function display(movieData) {
 }
 
 //NEXT/PREV BUTTON FUNCTIONALITY
-nextPageCount = 1;
+nextPageCount = 2;
 prevPageCount = 0;
 
 function handleNextClick(event) {
@@ -182,7 +182,6 @@ function handleNextClick(event) {
 
 function handlePrevClick(event) {
   prevPageCount = nextPageCount - 1;
-  nextPageCount = nextPageCount - 1;
   if (prevPageCount == 0 || nextPageCount == 1) {
     return;
   }
